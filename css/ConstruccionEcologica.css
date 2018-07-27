@@ -1,0 +1,33 @@
+body {
+    background-image: url("../images/portada-transparente.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.navbar-brand {
+    width: 25%;
+    margin: 0;
+}
+
+.imagen-presentacion{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.resaltado {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+}
+
+h1{
+  text-align: center;
+}
+p {
+    text-align: center;
+}
+.img-responsive{
+  margin: 0 auto;
+}
