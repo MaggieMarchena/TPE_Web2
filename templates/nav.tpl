@@ -1,21 +1,31 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="home/">Home</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a class="partial-render" href="techniques/">Técnicas <span class="sr-only">(current)</span></a></li>
-        <li><a class="partial-render" href="examples/">Proyectos ejemplo </a></li>
-      </ul>
-    </div>
-  </div><!-- /.container-fluid -->
+<!DOCTYPE html>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="home">Coneco</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="techniques">Técnicas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="examples">Ejemplos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="DIY">DIY</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="email" placeholder="Usuario@usuario.com">
+      <input class="form-control mr-sm-2" type="password" placeholder="Contraseña">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up!</button>
+    </form>
+  </div>
 </nav>

@@ -1,4 +1,6 @@
-<!DOCTYPE html><!-- /.por error que tira Linter -->
+<!DOCTYPE html>
+{include file="header.tpl"}
+{include file="nav.tpl"}
 <section class="container-fluid">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-6">
@@ -15,3 +17,4 @@
     </div>
   </div>
 </section>
+{include file="footer.tpl"}
