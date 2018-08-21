@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-{include file="header.tpl"}
-{include file="nav.tpl"}
+<!-- {include file="header.tpl"}
+{include file="nav.tpl"} -->
 <article class="container-fluid">
   <div class="row">
     <section class="col-xs-12 ">
@@ -36,4 +36,4 @@
     </aside>
   </div>
 </article>
-{include file="footer.tpl"}
+<!-- {include file="footer.tpl"} -->

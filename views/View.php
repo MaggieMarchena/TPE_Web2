@@ -8,7 +8,7 @@
 
     function __construct(){
       $this->smarty = new Smarty();
-      $this->smarty->assign('mainTitle', 'To Do App');
+      $this->smarty->assign('mainTitle', 'Construcción Ecológica');
     }
 
   }

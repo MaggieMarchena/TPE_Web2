@@ -9,9 +9,8 @@
     }
 
     function getProjectById($id){
-      $query = $this->db->prepare("select title, supplies, steps from project where id=?");
-      //Warning: PDOStatement::execute() expects parameter 1 to be array, string given in line 13
-      $query->execute($id);
+      $query = $this->db->prepare("select * from project where id=?");
+      $query->execute([$id]);
       return $query->fetch(PDO::FETCH_ASSOC);
     }
 

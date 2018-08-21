@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-{include file="header.tpl"}
-{include file="nav.tpl"}
+
 <section class="container-fluid">
 
   <h1>{$project['title']}</h1>
@@ -10,4 +9,3 @@
   <p>{$project['steps']}</p>
 
 </section>
-{include file="footer.tpl"}

@@ -3,7 +3,7 @@
 {include file="header.tpl"}
 {include file="nav.tpl"}
 
-<div id="window-content">
+<div class="container-fluid" id="main">
 
   {include file="home.tpl"}
 

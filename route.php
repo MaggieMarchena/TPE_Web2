@@ -9,6 +9,9 @@
   include_once 'views/NavView.php';
   include_once 'views/ProjectsView.php';
   include_once 'models/ProjectsModel.php';
+  include_once 'controllers/LoginController.php';
+  include_once 'views/LoginView.php';
+  include_once 'models/LoginModel.php';
 
   define('ACTION', 0);
   define('PARAMS', 1);

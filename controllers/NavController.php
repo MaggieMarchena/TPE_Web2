@@ -17,6 +17,10 @@ class NavController extends Controller{
   //   }
   // }
 
+  function showIndex(){
+    $this->view->loadIndex();
+  }
+
   function showHome(){
     $this->view->loadHome();
   }
@@ -32,6 +36,10 @@ class NavController extends Controller{
   function showDIY(){
     $projects = $this->model->getProjects();
     $this->view->loadDIY($projects);
+  }
+
+  function showAdmin(){
+    $this->view->loadAdmin();
   }
 
 }

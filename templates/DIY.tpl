@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-{include file="header.tpl"}
-{include file="nav.tpl"}
+<!-- {include file="header.tpl"}
+{include file="nav.tpl"} -->
 <section class="container-fluid">
 
   <table class="table table-striped">
@@ -21,4 +21,4 @@
   </table>
 
 </section>
-{include file="footer.tpl"}
+<!-- {include file="footer.tpl"} -->
