@@ -6,11 +6,16 @@
     //   $this->smarty->display('templates/'+$destination+'.tpl');
     // }
 
-    function loadIndex(){
+    function loadIndex($session){
+      // $hash = password_hash('123456', PASSWORD_DEFAULT);
+      // var_dump($hash);
+      // die();
+      $this->smarty->assign('session', $session);
       $this->smarty->display('templates/index.tpl');
     }
 
-    function loadHome(){
+    function loadHome($session){
+      $this->smarty->assign('session', $session);
       $this->smarty->display('templates/home.tpl');
     }
 
@@ -27,7 +32,8 @@
       $this->smarty->display('templates/DIY.tpl');
     }
 
-    function loadAdmin(){
+    function loadAdmin($session){
+      $this->smarty->assign('session', $session);
       $this->smarty->display('templates/admin.tpl');
     }
 

@@ -1,6 +1,6 @@
-$(document).ready(function () {
+let ORIGIN = 'http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']);
 
-  define('ORIGIN', 'http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']));
+$(document).ready(function () {
 
   function render(page, method) {
     $.ajax({

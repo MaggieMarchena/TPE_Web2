@@ -21,11 +21,18 @@
         <a class="nav-link" href="DIY" id="DIY">DIY</a>
       </li>
     </ul>
+    {if !$session}
     <form class="form-inline my-2 my-lg-0" action="verifyUser" method="post">
       <input class="form-control mr-sm-2" id="username" name="username" type="email" placeholder="Usuario@usuario.com" required>
       <input class="form-control mr-sm-2" id="password" name="password" type="password" placeholder="Contraseña" required>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
     </form>
     <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up!</button>
+    {else}
+      <form class="form-inline my-2 my-lg-0" action="logout" method="post">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+      </form>
+    {/if}
+
   </div>
 </nav>

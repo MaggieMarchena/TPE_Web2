@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-21 01:44:26
+/* Smarty version 3.1.32, created on 2018-08-22 05:03:46
   from 'C:\xampp\htdocs\Projects\TPE_Web2\templates\nav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b7b525a0dfb42_56857139',
+  'unifunc' => 'content_5b7cd292d9f0f6_84297192',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '573f11e9a582c389fc99d053b464bbc10f2dfbf1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Projects\\TPE_Web2\\templates\\nav.tpl',
-      1 => 1534808659,
+      1 => 1534907023,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b7b525a0dfb42_56857139 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b7cd292d9f0f6_84297192 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -44,12 +44,19 @@ function content_5b7b525a0dfb42_56857139 (Smarty_Internal_Template $_smarty_tpl)
         <a class="nav-link" href="DIY" id="DIY">DIY</a>
       </li>
     </ul>
+    <?php if (!$_smarty_tpl->tpl_vars['session']->value) {?>
     <form class="form-inline my-2 my-lg-0" action="verifyUser" method="post">
       <input class="form-control mr-sm-2" id="username" name="username" type="email" placeholder="Usuario@usuario.com" required>
       <input class="form-control mr-sm-2" id="password" name="password" type="password" placeholder="Contraseña" required>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
     </form>
     <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up!</button>
+    <?php } else { ?>
+      <form class="form-inline my-2 my-lg-0" action="logout" method="post">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+      </form>
+    <?php }?>
+
   </div>
 </nav>
 <?php }

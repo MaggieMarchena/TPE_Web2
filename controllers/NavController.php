@@ -18,11 +18,15 @@ class NavController extends Controller{
   // }
 
   function showIndex(){
-    $this->view->loadIndex();
+    session_start();
+    $session = !empty($_SESSION);
+    $this->view->loadIndex($session);
   }
 
   function showHome(){
-    $this->view->loadHome();
+    session_start();
+    $session = !empty($_SESSION);
+    $this->view->loadHome($session);
   }
 
   function showTechniques(){
@@ -39,7 +43,9 @@ class NavController extends Controller{
   }
 
   function showAdmin(){
-    $this->view->loadAdmin();
+    session_start();
+    $session = !empty($_SESSION);
+    $this->view->loadAdmin($session);
   }
 
 }

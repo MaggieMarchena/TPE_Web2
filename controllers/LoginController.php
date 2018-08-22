@@ -17,8 +17,6 @@
 
       if (!empty($username) && !empty($password)) {
         $user = $this->model->getUser($username);
-        // print_r($user);
-        // die();
         if (!empty($user) && password_verify($password, $user[0]['password'])) {
           session_start();
           $_SESSION['username'] = $username;
