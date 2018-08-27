@@ -60,10 +60,10 @@ class NavController extends Controller{
     $session = !empty($_SESSION);
     if (isset($_SESSION['name'])) {
       $name = $_SESSION['name'];
-      $this->view->loadAdmin($session, $name);
+      $this->userView->loadAdmin($session, $name);
     }
     else {
-      $this->view->loadAdmin($session);
+      $this->userView->loadAdmin($session);
     }
   }
 
