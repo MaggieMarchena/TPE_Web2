@@ -11,9 +11,11 @@
       'DIY'=> 'NavController#showDIY',
       'project'=> 'ProjectsController#showProject',
 
-      'logout'=> 'LoginController#destroy',
-      'verifyUser'=> 'LoginController#verify',
+      'logout'=> 'UserController#destroy',
+      'verifyUser'=> 'UserController#verify',
       'admin'=> 'NavController#showAdmin',
+      'signUp'=> 'NavController#showSignUp',
+      'createUser'=> 'UserController#createUser',
 
     ];
   }

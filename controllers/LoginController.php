@@ -1,13 +1,12 @@
 <?php
 
-  include_once 'models/LoginModel.php';
+  include_once 'models/UserModel.php';
   include_once 'views/LoginView.php';
 
   class LoginController extends Controller{
 
     function __construct(){
-      $this->model = new LoginModel();
-      //$this->view = new LoginView();
+      $this->model = new UserModel();
     }
 
     public function verify(){

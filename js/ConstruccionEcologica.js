@@ -1,12 +1,12 @@
-let ORIGIN = 'http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']);
+//let ORIGIN = 'http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']);
 
 $(document).ready(function () {
 
   function render(page, method) {
     $.ajax({
 			type:'GET',
-			url: 'ORIGIN'+method,
-      // url: window.location.origin + window.location.pathname+method,
+			//url: 'ORIGIN'+method,
+      url: window.location.origin + window.location.pathname+method,
 			success: load
 		});
 		$("a").removeClass("active");

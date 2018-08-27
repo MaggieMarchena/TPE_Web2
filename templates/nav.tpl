@@ -27,8 +27,13 @@
       <input class="form-control mr-sm-2" id="password" name="password" type="password" placeholder="Contraseña" required>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
     </form>
-    <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up!</button>
+    <form class="form-inline my-2 my-lg-0" action="signUp" method="post">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up!</button>
+    </form>
     {else}
+      {if $name != null}
+        <h4>Hola {$name}!</h4>
+      {/if}
       <form class="form-inline my-2 my-lg-0" action="logout" method="post">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
       </form>

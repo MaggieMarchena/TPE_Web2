@@ -4,6 +4,7 @@ class NavController extends Controller{
 
   function __construct(){
     $this->view = new NavView();
+    $this->userView = new UserView();
     $this->model = new ProjectsModel();
   }
 
@@ -20,13 +21,25 @@ class NavController extends Controller{
   function showIndex(){
     session_start();
     $session = !empty($_SESSION);
-    $this->view->loadIndex($session);
+    if (isset($_SESSION['name'])) {
+      $name = $_SESSION['name'];
+      $this->view->loadIndex($session, $name);
+    }
+    else {
+      $this->view->loadIndex($session);
+    }
   }
 
   function showHome(){
     session_start();
     $session = !empty($_SESSION);
-    $this->view->loadHome($session);
+    if (isset($_SESSION['name'])) {
+      $name = $_SESSION['name'];
+      $this->view->loadHome($session, $name);
+    }
+    else {
+      $this->view->loadHome($session);
+    }
   }
 
   function showTechniques(){
@@ -45,7 +58,19 @@ class NavController extends Controller{
   function showAdmin(){
     session_start();
     $session = !empty($_SESSION);
-    $this->view->loadAdmin($session);
+    if (isset($_SESSION['name'])) {
+      $name = $_SESSION['name'];
+      $this->view->loadAdmin($session, $name);
+    }
+    else {
+      $this->view->loadAdmin($session);
+    }
+  }
+
+  function showSignUp(){
+    session_start();
+    $session = !empty($_SESSION);
+    $this->userView->loadSignUp($session);
   }
 
 }
