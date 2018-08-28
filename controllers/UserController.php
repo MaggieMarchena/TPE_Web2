@@ -63,6 +63,14 @@
       }
     }
 
+    function isAdmin($username){
+      $user = $this->model->getUser($username);
+      if ($user[0]['admin'] == 1) {
+        return true;
+      }
+      return false;
+    }
+
   }
 
 ?>

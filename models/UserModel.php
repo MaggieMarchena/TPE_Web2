@@ -13,8 +13,9 @@
       return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    function setAdminValue($value){
-      // code...
+    function setAdminValue($value, $username){
+      $query = $this->db->prepare("update user set admin=? where username=?");
+      $query->execute($value, $username);
     }
 
     function delete($value=''){

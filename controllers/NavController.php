@@ -1,11 +1,12 @@
 <?php
 
-class NavController extends Controller{
+class NavController extends SecuredController{
 
   function __construct(){
     $this->view = new NavView();
     $this->userView = new UserView();
     $this->model = new ProjectsModel();
+    $this->userModel = new UserModel();
   }
 
   // function showPage($params=''){
@@ -21,9 +22,15 @@ class NavController extends Controller{
   function showIndex(){
     session_start();
     $session = !empty($_SESSION);
-    if (isset($_SESSION['name'])) {
+    if ($session) {
       $name = $_SESSION['name'];
-      $this->view->loadIndex($session, $name);
+      $user = $this->userModel->getUser($_SESSION['username']);
+      if ($user[0]['admin'] == 1) {
+        $this->userView->loadAdmin($session, $name);
+      }
+      else {
+        $this->view->loadIndex($session, $name);
+      }
     }
     else {
       $this->view->loadIndex($session);
@@ -33,9 +40,15 @@ class NavController extends Controller{
   function showHome(){
     session_start();
     $session = !empty($_SESSION);
-    if (isset($_SESSION['name'])) {
+    if ($session) {
       $name = $_SESSION['name'];
-      $this->view->loadHome($session, $name);
+      $user = $this->userModel->getUser($_SESSION['username']);
+      if ($user[0]['admin'] == 1) {
+        $this->userView->loadAdmin($session, $name);
+      }
+      else {
+        $this->view->loadHome($session, $name);
+      }
     }
     else {
       $this->view->loadHome($session);
