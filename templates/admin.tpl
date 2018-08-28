@@ -34,12 +34,9 @@
       <section>
         <h1>Usuarios</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action active">
+          <a href="users" class="list-group-item list-group-item-action active">
             Ver lista
           </a>
-          <a href="#" class="list-group-item list-group-item-action">Agregar proyecto</a>
-          <a href="#" class="list-group-item list-group-item-action">Editar proyecto</a>
-          <a href="#" class="list-group-item list-group-item-action">Eliminar proyecto</a>
         </div>
       </section>
     </div>

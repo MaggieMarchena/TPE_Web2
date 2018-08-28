@@ -17,6 +17,8 @@
       'signUp'=> 'NavController#showSignUp',
       'createUser'=> 'UserController#createUser',
 
+      'users'=> 'UserController#showUsers',
+
     ];
   }
 

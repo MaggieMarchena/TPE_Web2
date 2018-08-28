@@ -63,12 +63,22 @@
       }
     }
 
-    function isAdmin($username){
+    function changeAdmin(){
+      $username = $_POST['username'];
       $user = $this->model->getUser($username);
       if ($user[0]['admin'] == 1) {
-        return true;
+        $this->model->setAdminValue($username, TRUE);
       }
-      return false;
+      else {
+        $this->model->setAdminValue($username, FALSE);
+      }
+    }
+
+    function showUsers(){
+      $users = $this->model->getAll();
+      session_start();
+      $username = $_SESSION['username'];
+      $this->view->loadUsers($users, $username);
     }
 
   }

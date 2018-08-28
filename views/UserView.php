@@ -14,6 +14,12 @@
       $this->smarty->display('templates/admin.tpl');
     }
 
+    function loadUsers($users, $username){
+      $this->smarty->assign('users', $users);
+      $this->smarty->assign('username', $username);
+      $this->smarty->display('templates/users.tpl');
+    }
+
   }
 
 ?>
