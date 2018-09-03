@@ -7,20 +7,22 @@
   <li class="navbar-brand">Coneco</li>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" href="home" id="home">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="techniques" id="techniques">Técnicas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="examples" id="examples">Ejemplos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="DIY" id="DIY">DIY</a>
-      </li>
-    </ul>
+    <div class="nav" id="nav">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="home" id="home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="techniques" id="techniques">Técnicas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="examples" id="examples">Ejemplos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="DIY" id="DIY">DIY</a>
+        </li>
+      </ul>
+    </div>
     {if !$session}
       <form class="form-inline my-2 my-lg-0" action="verifyUser" method="post">
         <input class="form-control mr-sm-2" id="username" name="username" type="email" placeholder="Usuario@usuario.com" required>
